@@ -1,6 +1,6 @@
 {
   "name": "create-branches-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The utility for creating branches according to a certain template, moving in steps",
   "repository": "https://github.com/AlexGunin/create_branches_cli.git",
   "type": "module",
@@ -9,7 +9,11 @@
     "start": "node --experimental-specifier-resolution=node dist/src/index.js",
     "build": "tsc --project ./tsconfig.json --watch"
   },
-  "keywords": ["branches", "git", "command-line"],
+  "keywords": [
+    "branches",
+    "git",
+    "command-line"
+  ],
   "author": "Alexey Gunin",
   "license": "ISC",
   "dependencies": {
