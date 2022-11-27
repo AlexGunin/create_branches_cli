@@ -30,8 +30,8 @@ const getProperty = <T extends keyof Config>(name: T): Config[T] => {
   return config[name];
 };
 
-const getBranchTypes = (): string[] => {
-  const result = getProperty("branch_types");
+const getTaskTypes = (): string[] => {
+  const result = getProperty("task_types");
   return Array.isArray(result) ? result : [result];
 };
 
@@ -53,7 +53,7 @@ export {
   getProperty,
   getIsAutoCheckout,
   getBranchNameTemplate,
-  getBranchTypes,
+  getTaskTypes,
   getProjectNames,
   getTaskNameDelimiter,
 };

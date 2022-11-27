@@ -1,5 +1,5 @@
 import {
-  getBranchTypes,
+  getTaskTypes,
   getProjectNames,
   getTaskNameDelimiter,
 } from "./json_getters";
@@ -7,14 +7,14 @@ import inquirer from "inquirer";
 import { tcd } from "./tcd";
 import { transformToAnswers } from "./helpers";
 
-const getBranchType = tcd(async () => {
-  const branchTypes = getBranchTypes();
-  if (branchTypes.length === 1) return branchTypes[0];
+const getTaskType = tcd(async () => {
+  const taskTypes = getTaskTypes();
+  if (taskTypes.length === 1) return taskTypes[0];
 
-  const answers = transformToAnswers(branchTypes);
+  const answers = transformToAnswers(taskTypes);
   const question = {
-    message: "Select branch type",
-    name: "branch_type",
+    message: "Select task type",
+    name: "task_type",
     type: "list",
     choices: answers,
   };
@@ -67,4 +67,4 @@ const getTaskName = tcd(async () => {
   return answer[question.name].trim().replace(/\W/gi, delimiter);
 });
 
-export { getBranchType, getTaskName, getTaskNumber, getProjectName };
+export { getTaskType, getTaskName, getTaskNumber, getProjectName };
