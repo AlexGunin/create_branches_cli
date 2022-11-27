@@ -6,6 +6,8 @@ import {
   getTaskNumber,
 } from "./utils/property_getters";
 
+const CONFIG_FILE_NAME = "cbconfig.json";
+
 const DEFAULT_TASK_NAME_DELIMITER = "_";
 const DEFAULT_BRANCH_NAME_TEMPLATE =
   "<branch_type>/<project_name>-<task_id>-<task_name>";
@@ -23,4 +25,5 @@ export {
   DEFAULT_TASK_NAME_DELIMITER,
   DEFAULT_BRANCH_NAME_TEMPLATE,
   PROPERTY_MAP,
+  CONFIG_FILE_NAME,
 };
