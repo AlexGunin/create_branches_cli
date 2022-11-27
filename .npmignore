@@ -5,3 +5,4 @@ webpack.config.ts
 tsconfig.json
 cbconfig.json
 .parcel-cache
+readme_assets

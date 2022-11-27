@@ -1,6 +1,6 @@
 import { PartsBranchName } from "./types";
 import {
-  getBranchType,
+  getTaskType,
   getProjectName,
   getTaskName,
   getTaskNumber,
@@ -10,14 +10,14 @@ const CONFIG_FILE_NAME = "cbconfig.json";
 
 const DEFAULT_TASK_NAME_DELIMITER = "_";
 const DEFAULT_BRANCH_NAME_TEMPLATE =
-  "<branch_type>/<project_name>-<task_id>-<task_name>";
+  "<task_type>/<project_name>-<task_id>-<task_name>";
 const DEFAULT_IS_AUTO_CHECKOUT = false;
 
 const PROPERTY_MAP: Record<PartsBranchName, () => any> = {
-  branch_type: getBranchType,
-  project_name: getProjectName,
-  task_id: getTaskNumber,
-  task_name: getTaskName,
+  [PartsBranchName.task_type]: getTaskType,
+  [PartsBranchName.project_name]: getProjectName,
+  [PartsBranchName.task_id]: getTaskNumber,
+  [PartsBranchName.task_name]: getTaskName,
 };
 
 export {

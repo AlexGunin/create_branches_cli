@@ -23,6 +23,15 @@ const $0ad0bc75b5eb16a6$export$365c62e5f8532e08 = (command)=>// @ts-ignore
 
 
 
+let $81c1b644006d48ec$export$648134ce7ac007fb;
+(function(PartsBranchName) {
+    PartsBranchName["project_name"] = "project_name";
+    PartsBranchName["task_type"] = "task_type";
+    PartsBranchName["task_id"] = "task_id";
+    PartsBranchName["task_name"] = "task_name";
+})($81c1b644006d48ec$export$648134ce7ac007fb || ($81c1b644006d48ec$export$648134ce7ac007fb = {}));
+
+
 
 
 
@@ -58,8 +67,8 @@ const $50b13159f6282d6f$export$63ef76b19cf4a753 = (name)=>{
     if (config[name] == null) throw new Error(`You need to add ${name} property`);
     return config[name];
 };
-const $50b13159f6282d6f$export$72675fce44ecc4a2 = ()=>{
-    const result = $50b13159f6282d6f$export$63ef76b19cf4a753("branch_types");
+const $50b13159f6282d6f$export$7a9cc7d7795b1ea = ()=>{
+    const result = $50b13159f6282d6f$export$63ef76b19cf4a753("task_types");
     return Array.isArray(result) ? result : [
         result
     ];
@@ -78,13 +87,13 @@ const $50b13159f6282d6f$export$92c6256bb826de79 = ()=>$50b13159f6282d6f$export$6
 
 
 
-const $af5d2fe3777da1fe$export$165522e33f24fcac = (0, $243fbdb628f4cca8$export$84c0a90d80080172)(async ()=>{
-    const branchTypes = (0, $50b13159f6282d6f$export$72675fce44ecc4a2)();
-    if (branchTypes.length === 1) return branchTypes[0];
-    const answers = (0, $0ad0bc75b5eb16a6$export$3e2a003fb60aac51)(branchTypes);
+const $af5d2fe3777da1fe$export$87cbdc2ba79bea53 = (0, $243fbdb628f4cca8$export$84c0a90d80080172)(async ()=>{
+    const taskTypes = (0, $50b13159f6282d6f$export$7a9cc7d7795b1ea)();
+    if (taskTypes.length === 1) return taskTypes[0];
+    const answers = (0, $0ad0bc75b5eb16a6$export$3e2a003fb60aac51)(taskTypes);
     const question = {
-        message: "Select branch type",
-        name: "branch_type",
+        message: "Select task type",
+        name: "task_type",
         type: "list",
         choices: answers
     };
@@ -136,13 +145,13 @@ const $af5d2fe3777da1fe$export$f22ad6bc41436f9d = (0, $243fbdb628f4cca8$export$8
 
 const $234747a9630b4642$export$ef0d7260c38fe763 = "cbconfig.json";
 const $234747a9630b4642$export$8ae42b4c1a3edfaa = "_";
-const $234747a9630b4642$export$2ab2785046f819bb = "<branch_type>/<project_name>-<task_id>-<task_name>";
+const $234747a9630b4642$export$2ab2785046f819bb = "<task_type>/<project_name>-<task_id>-<task_name>";
 const $234747a9630b4642$export$f71302df76ec14b6 = false;
 const $234747a9630b4642$export$a3dddd4caa53abcd = {
-    branch_type: (0, $af5d2fe3777da1fe$export$165522e33f24fcac),
-    project_name: (0, $af5d2fe3777da1fe$export$2cd058184eb75757),
-    task_id: (0, $af5d2fe3777da1fe$export$7f4f11a580da0d7a),
-    task_name: (0, $af5d2fe3777da1fe$export$f22ad6bc41436f9d)
+    [(0, $81c1b644006d48ec$export$648134ce7ac007fb).task_type]: (0, $af5d2fe3777da1fe$export$87cbdc2ba79bea53),
+    [(0, $81c1b644006d48ec$export$648134ce7ac007fb).project_name]: (0, $af5d2fe3777da1fe$export$2cd058184eb75757),
+    [(0, $81c1b644006d48ec$export$648134ce7ac007fb).task_id]: (0, $af5d2fe3777da1fe$export$7f4f11a580da0d7a),
+    [(0, $81c1b644006d48ec$export$648134ce7ac007fb).task_name]: (0, $af5d2fe3777da1fe$export$f22ad6bc41436f9d)
 };
 
 
