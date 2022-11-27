@@ -9,6 +9,7 @@ const removeNonLetterCharacters = (str: string) => str.replace(/\W/gi, "");
 
 const createResultLog =
   (command: string) =>
+  // @ts-ignore
   (error: ExecException | null, stdout: string, stderr: string) => {
     if (error) {
       console.log(`error: ${error.message}`);

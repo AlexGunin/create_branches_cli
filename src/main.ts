@@ -17,9 +17,7 @@ const getBranchNameByTemplate = tcd(async () => {
     const regExp = propertyValue
       ? new RegExp(property, "gi")
       : new RegExp(`${property}?\\W`, "gi");
-    console.log("RESULT BEFORE", result);
     result = result.replace(regExp, propertyValue || "");
-    console.log("RESULT AFTER", result);
   }
 
   return result;

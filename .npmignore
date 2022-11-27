@@ -1,3 +1,7 @@
 .idea/
 src/
-
+config/
+webpack.config.ts
+tsconfig.json
+cbconfig.json
+.parcel-cache
