@@ -6,7 +6,7 @@
   "type": "module",
   "exports": "./lib/src/index.js",
   "scripts": {
-    "start": "node --experimental-specifier-resolution=node lib/src/index.js",
+    "start": "node --experimental-specifier-resolution=node dist/src/index.js",
     "build": "tsc --project ./tsconfig.json --watch"
   },
   "keywords": ["branches", "git", "command-line"],

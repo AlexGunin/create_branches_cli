@@ -8,7 +8,7 @@ import {
 
 const DEFAULT_TASK_NAME_DELIMITER = "_";
 const DEFAULT_BRANCH_NAME_TEMPLATE =
-  "<branch_type>/<project_name>-<task_id>-<branch_name>";
+  "<branch_type>/<project_name>-<task_id>-<task_name>";
 const DEFAULT_IS_AUTO_CHECKOUT = false;
 
 const PROPERTY_MAP: Record<PartsBranchName, () => any> = {
