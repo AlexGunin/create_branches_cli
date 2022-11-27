@@ -1,0 +1,7 @@
+{
+  "project_names": "CHATPOINT",
+  "branch_types": ["feature", "bugfix", "hotfix"],
+  "task_name_delimiter": "_",
+  "branch_name_template": "<branch_type>/<project_name>-<task_id>-<task_name>",
+  "autoCheckout": true
+}
