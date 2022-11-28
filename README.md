@@ -16,7 +16,7 @@ In the screenshot, the desired screen is ```cb``` (short for create branches)
 ```
 EXAMPLE:
 {
-  "branch_name_template": "<branch_type>/<project_name>-<task_id>-<task_name>",
+  "branch_name_template": "<task_type>/<project_name>-<task_id>-<task_name>",
   "project_names": "CHATPOINT",
   "task_types": ["feature", "bugfix", "hotfix"],
   "task_name_delimiter": "_",
@@ -41,7 +41,7 @@ TYPES:
 - meaning: The structure by which the branch name will be generated
 - available properties (Determines which questions will be asked when creating a branch): 
   
-    - ``` <branch_type> ```
+    - ```<task_type> ```
     - ```<project_name>```
     - ```<task_id> ```
     - ```<task_name>```
@@ -59,7 +59,7 @@ TYPES:
 4) ### ```task_name_delimiter```
 - meaning: When answering the question about the name of the task, you can use a space or any other separator, but when forming a command, the name of the task will be divided by the specified character (by default, underscore ```_```)
 
-5) ### ```autoCheckout```
+5) ### ```auto_checkout```
 - meaning: If the value is true, ```git checkout -b ${branch_name}``` will be executed, if false - ```git branch ${branch_name}```
 
 
