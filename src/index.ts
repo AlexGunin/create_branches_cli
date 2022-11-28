@@ -23,14 +23,14 @@ const getBranchNameByTemplate = tcd(async () => {
   return result;
 });
 
-const index = async () => {
+const main = async () => {
   const branchNameByTemplate = await getBranchNameByTemplate();
   const isAutoCheckout = getIsAutoCheckout();
-  const gitCommand = isAutoCheckout ? "checkout -b" : "branch";
+  const gitCommand = isAutoCheckout ? "git checkout -b" : "git branch";
 
-  const fullCommand = `git ${gitCommand} ${branchNameByTemplate}`;
+  const fullCommand = `${gitCommand} ${branchNameByTemplate}`;
 
   exec(fullCommand, createResultLog(fullCommand));
 };
 
-index();
+main();

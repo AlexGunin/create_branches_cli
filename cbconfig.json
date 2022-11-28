@@ -3,5 +3,5 @@
   "task_types": ["feature", "bugfix", "hotfix"],
   "task_name_delimiter": "_",
   "branch_name_template": "<task_type>/<project_name>-<task_id>-<task_name>",
-  "autoCheckout": true
+  "auto_checkout": true
 }

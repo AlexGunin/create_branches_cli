@@ -47,7 +47,7 @@ const getBranchNameTemplate = (): string =>
   getProperty("branch_name_template") ?? DEFAULT_BRANCH_NAME_TEMPLATE;
 
 const getIsAutoCheckout = (): boolean =>
-  getProperty("autoCheckout") ?? DEFAULT_IS_AUTO_CHECKOUT;
+  getProperty("auto_checkout") ?? DEFAULT_IS_AUTO_CHECKOUT;
 
 export {
   getProperty,
