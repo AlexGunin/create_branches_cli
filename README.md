@@ -20,7 +20,7 @@ EXAMPLE:
   "project_names": "CHATPOINT",
   "task_types": ["feature", "bugfix", "hotfix"],
   "task_name_delimiter": "_",
-  "autoCheckout": true
+  "auto_checkout": true
 }
 
 TYPES: 
@@ -29,7 +29,7 @@ TYPES:
   project_names: string | string[];
   task_types: string | string[];
   task_name_delimiter?: string;
-  autoCheckout?: boolean;
+  auto_checkout?: boolean;
 }
 ```
 3) Сall ```npm run cb``` in the terminal
