@@ -16,7 +16,7 @@
     "checkout",
     "command-line",
     "cli",
-    "git",
+    "git"
   ],
   "author": "Alexey Gunin",
   "license": "ISC",
