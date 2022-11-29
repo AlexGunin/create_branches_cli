@@ -1,6 +1,6 @@
 {
   "name": "create-branches-cli",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "The utility for creating branches according to a certain template, moving in steps",
   "repository": "https://github.com/AlexGunin/create_branches_cli.git",
   "type": "module",
