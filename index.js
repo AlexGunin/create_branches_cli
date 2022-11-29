@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import {exec as $gHeVW$exec} from "child_process";
 import $gHeVW$inquirer from "inquirer";
 import {cwd as $gHeVW$cwd} from "process";
@@ -81,7 +83,7 @@ const $50b13159f6282d6f$export$9d2478af5a6e5e7e = ()=>{
 };
 const $50b13159f6282d6f$export$c6ccc76cc5ef7024 = ()=>$50b13159f6282d6f$export$63ef76b19cf4a753("task_name_delimiter") ?? (0, $234747a9630b4642$export$8ae42b4c1a3edfaa);
 const $50b13159f6282d6f$export$75645165895caede = ()=>$50b13159f6282d6f$export$63ef76b19cf4a753("branch_name_template") ?? (0, $234747a9630b4642$export$2ab2785046f819bb);
-const $50b13159f6282d6f$export$92c6256bb826de79 = ()=>$50b13159f6282d6f$export$63ef76b19cf4a753("autoCheckout") ?? (0, $234747a9630b4642$export$f71302df76ec14b6);
+const $50b13159f6282d6f$export$92c6256bb826de79 = ()=>$50b13159f6282d6f$export$63ef76b19cf4a753("auto_checkout") ?? (0, $234747a9630b4642$export$f71302df76ec14b6);
 
 
 
@@ -169,14 +171,14 @@ const $149c1bd638913645$var$getBranchNameByTemplate = (0, $243fbdb628f4cca8$expo
     }
     return result;
 });
-const $149c1bd638913645$var$index = async ()=>{
+const $149c1bd638913645$var$main = async ()=>{
     const branchNameByTemplate = await $149c1bd638913645$var$getBranchNameByTemplate();
     const isAutoCheckout = (0, $50b13159f6282d6f$export$92c6256bb826de79)();
-    const gitCommand = isAutoCheckout ? "checkout -b" : "branch";
-    const fullCommand = `git ${gitCommand} ${branchNameByTemplate}`;
+    const gitCommand = isAutoCheckout ? "git checkout -b" : "git branch";
+    const fullCommand = `${gitCommand} ${branchNameByTemplate}`;
     (0, $gHeVW$exec)(fullCommand, (0, $0ad0bc75b5eb16a6$export$365c62e5f8532e08)(fullCommand));
 };
-$149c1bd638913645$var$index();
+$149c1bd638913645$var$main();
 
 
 //# sourceMappingURL=index.js.map
