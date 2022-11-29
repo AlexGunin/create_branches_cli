@@ -10,6 +10,7 @@
     "watch": "parcel watch",
     "build": "parcel build"
   },
+  "bin": "./index.js",
   "keywords": [
     "branch",
     "branches",
