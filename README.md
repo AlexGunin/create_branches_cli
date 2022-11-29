@@ -11,6 +11,8 @@ In the screenshot, the desired screen is ```cb``` (short for create branches)
 
 ![img.png](readme_assets/img.png)
 
+- You can also immediately enter the command ```npx create-branches-cli``` into the terminal 
+
 2) You need to create a ```cbconfig.json``` in the root of the project
 
 ```
